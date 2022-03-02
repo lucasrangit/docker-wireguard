@@ -1,6 +1,9 @@
 #!/bin/bash
-
+set -o xtrace
 set -e
+
+# Run PIA setup script
+/opt/piavpn-manual/run_setup.sh
 
 default_route_ip=$(ip route | grep default | awk '{print $3}')
 if [[ -z "$default_route_ip" ]]; then
