@@ -18,7 +18,7 @@ docker run --name wireguard                                          \
     --cap-add SYS_MODULE                                             \
     --sysctl net.ipv4.conf.all.src_valid_mark=1                      \
     -v /path/to/conf/mullvad.conf:/etc/wireguard/mullvad.conf        \
-    jordanpotter/wireguard
+    lucasrangit/wireguard
 ```
 
 Afterwards, you can link other containers to this one:
@@ -37,7 +37,7 @@ Here is the same example as above, but using Docker Compose:
 services:
   wireguard:
     container_name: wireguard
-    image: jordanpotter/wireguard
+    image: lucasrangit/wireguard
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -66,7 +66,7 @@ docker run --name wireguard                                          \
     --sysctl net.ipv4.conf.all.src_valid_mark=1                      \
     -v /path/to/conf/mullvad.conf:/etc/wireguard/mullvad.conf        \
     -e LOCAL_SUBNET=10.0.0.0/8                                       \
-    jordanpotter/wireguard
+    lucasrangit/wireguard
 ```
 
 Additionally, you can expose ports to allow your local network to access services linked to the Wireguard container:
@@ -78,7 +78,7 @@ docker run --name wireguard                                          \
     --sysctl net.ipv4.conf.all.src_valid_mark=1                      \
     -v /path/to/conf/mullvad.conf:/etc/wireguard/mullvad.conf        \
     -p 8080:80                                                       \
-    jordanpotter/wireguard
+    lucasrangit/wireguard
 ```
 
 ```bash
@@ -89,6 +89,6 @@ docker run -it --rm                                                  \
 
 ## Versioning
 
-Wireguard is new technology and its behavior may change in the future. For this reason, it's recommended to specify an image tag when running this container, such as `jordanpotter/wireguard:2.1.3`.
+Wireguard is new technology and its behavior may change in the future. For this reason, it's recommended to specify an image tag when running this container, such as `lucasrangit/wireguard:2.1.3`.
 
-The available tags are listed [here](https://hub.docker.com/r/jordanpotter/wireguard/tags).
+The available tags are listed [here](https://hub.docker.com/r/lucasrangit/wireguard/tags).
