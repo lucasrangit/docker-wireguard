@@ -1,6 +1,6 @@
 # Fork
 
-* At startup run PIA Wireguard authentication scripts to generate `wg0.conf`. According to https://github.com/pia-foss/manual-connections/pull/111#issuecomment-822824399 the Wireguard public key is deleted after a few hours of inactivity. Therefore, if your server is not online 24/7 this your Wireguard configuration might not longer be invalid.
+* At startup run PIA Wireguard authentication scripts to generate `wg0.conf`. According to https://github.com/pia-foss/manual-connections/pull/111#issuecomment-822824399 the Wireguard public key is deleted after a few hours of inactivity. Therefore, if your server/container is not online 24/7 this your Wireguard configuration might not longer be invalid.
 
 # Wireguard
 
